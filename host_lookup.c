@@ -9,6 +9,9 @@
 
 #include "hacking.h"
 
+/**
+ * Entry point.
+ */
 int main(int argc, char *argv[]) {
 	struct hostent *host_info;
 	struct in_addr *address;
