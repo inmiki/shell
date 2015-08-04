@@ -19,7 +19,12 @@ get_sp(void)
 int
 main(int argc,char* argv[])
 {
-	void(*shell)()=(void*)shellcode;
-	shell();
-return 0;
+	 int offset=0,bsize=RET+RANGE+1;
+	 int i;
+	 char buff[bsize],*ptr;
+	 long ret;
+	 unsigned long sp;
+	 
+	 if(argc<1)
+	 {
 }
