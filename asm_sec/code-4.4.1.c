@@ -31,7 +31,7 @@ main(int argc,char* argv[])
 	 	exit0;
 	 }
 	 offset=atoi(argv[1]);
-	 sp=get_ps();
+	 sp=get_sp();
 	 ret=sp-offset;
 	 
 	 printf("The stack pointer is: 0x%x\n",sp);
